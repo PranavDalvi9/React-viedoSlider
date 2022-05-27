@@ -6,19 +6,19 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
 export default function ViedoSlider() {
     const sliderData = [
         {
-            image: "https://media.istockphoto.com/photos/forest-wooden-table-background-summer-sunny-meadow-with-green-grass-picture-id1353553203?b=1&k=20&m=1353553203&s=170667a&w=0&h=QTyTGI9tWQluIlkmwW0s7Q4z7R_IT8egpzzHjW3cSas=",
+            image: "https://media.istockphoto.com/videos/thirty-seconds-to-zero-futuristic-digital-countdown-timer-with-no-video-id1326018562",
             index:0
         },
         {
-            image : "https://s3.envato.com/files/252192817/HD.jpg",
+            image : "https://media.istockphoto.com/videos/abstract-futuristic-technology-background-with-digital-number-timer-video-id1323414619",
             index:1
         },
         {
-            image : "https://previews.123rf.com/images/mangpor2004/mangpor20041708/mangpor2004170800063/83607686-blurred-park-with-bokeh-light-nature-background-fall-autumn-season.jpg",
+            image : "https://media.istockphoto.com/videos/glowing-golden-bitcoin-on-black-background-3d-rendering-video-id1263521126",
             index:2
         },
         {
-            image : "https://s3.envato.com/files/252192817/HD.jpg",
+            image : "https://media.istockphoto.com/videos/credit-score-concept-video-id1315958651",
             index:3
         }
     ]
@@ -45,7 +45,13 @@ export default function ViedoSlider() {
             <div className={e.index === curent ? 'slide-active' : 'slide' } key={e.index}>
 
                     {
-                        e.index === curent && (<img src= {e.image} alt="" className='Imagess' />)
+                        e.index === curent && (
+                        // <img src= {e.image} alt="" className='Imagess' />
+                        // <iframe src={e.image} frameborder="0" className='Imagess' ></iframe>
+                        <video autoPlay width={900}>
+                            <source src={e.image}/>
+                        </video>
+                        )
                     }
             </div>
             

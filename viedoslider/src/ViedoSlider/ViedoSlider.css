@@ -8,9 +8,10 @@
 
 .Imagess{
     border: 2px solid red;
-    width: 100%;
+    width: 1000px;
     height: 200px;
     border-radius: 20px;
+    /* margin-left: -110%; */
 }
 
 .LeftArrow{
@@ -38,10 +39,11 @@
 .slide{
     opacity: 0;
     transition-duration: 1s ease;
-
+    /* border: 2px solid pink; */
 }
 
 .slide-active{
+    /* border: 2px solid blue; */
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.08);
