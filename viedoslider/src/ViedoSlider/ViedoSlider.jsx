@@ -4,7 +4,9 @@ import "./ViedoSlider.css"
 export default function ViedoSlider() {
   return (
     <div>
-      hello
+      
+
+      
     </div>
   )
 }
