@@ -6,7 +6,9 @@
     padding-top: 3%;
     padding-bottom: 3%;
     background-color: bisque;
+    font-weight: bolder;
 }
 .NavBar>div:hover{
     /* border: 2px solid red; */
+    font-style: italic;
 }
