@@ -1,0 +1,48 @@
+.Slider{
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Imagess{
+    border: 2px solid red;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.LeftArrow{
+    position: absolute;
+    top:50% ;
+    left: 3%;
+    font-size: 30px;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.RightArrow{
+    position: absolute;
+    top:50% ;
+    right: 3%;
+    font-size: 30px;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slide{
+    opacity: 0;
+    transition-duration: 1s ease;
+
+}
+
+.slide-active{
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
