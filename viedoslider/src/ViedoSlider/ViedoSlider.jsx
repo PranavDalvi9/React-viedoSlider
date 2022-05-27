@@ -33,9 +33,7 @@ export default function ViedoSlider() {
     function auto (){
         slideInterval = setInterval(nextSlide, intervalTime)
     }
-useEffect(() => {
- setCurrent(0)
-},[])
+    
     useEffect(() => {
 if(autoScroll){
     auto()
