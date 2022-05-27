@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import ViedoSlider from './ViedoSlider/ViedoSlider';
-import { Routes , Route } from 'react-router-dom';
-import NavBar from './NavBar/NavBar';
-import Home from './Home/Home';
+import "./App.css";
+import ViedoSlider from "./ViedoSlider/ViedoSlider";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./NavBar/NavBar";
+import Home from "./Home/Home";
 
 function App() {
   return (
     <div className="App">
-<NavBar/>
-      {/* <ViedoSlider/> */}
+      <NavBar />
 
       <Routes>
+        <Route path="/" element={<Home />} />
 
-        <Route path='/' element={<Home/>} />
-
-      <Route path="/onboarding"  element={<ViedoSlider/>} />
-
+        <Route path="/onboarding" element={<ViedoSlider />} />
       </Routes>
-      
     </div>
   );
 }
