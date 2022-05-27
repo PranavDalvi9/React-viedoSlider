@@ -1,4 +1,12 @@
 .NavBar{
+    padding-left: 30%;
+    padding-right: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: bisque;
+}
+.NavBar>div:hover{
+    /* border: 2px solid red; */
 }
