@@ -6,20 +6,16 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
 export default function ViedoSlider() {
     const sliderData = [
         {
-            image: "https://media.istockphoto.com/videos/thirty-seconds-to-zero-futuristic-digital-countdown-timer-with-no-video-id1326018562",
+            image: "https://media.istockphoto.com/videos/young-woman-typing-on-laptop-keyboard-video-id162485781",
             index: 0
         },
         {
-            image: "https://media.istockphoto.com/videos/abstract-futuristic-technology-background-with-digital-number-timer-video-id1323414619",
+            image: "https://media.istockphoto.com/videos/aerial-view-of-harvard-university-in-cambridge-video-id1180893746",
             index: 1
         },
         {
-            image: "https://media.istockphoto.com/videos/glowing-golden-bitcoin-on-black-background-3d-rendering-video-id1263521126",
+            image: "https://media.istockphoto.com/videos/hard-work-teamwork-success-video-id1165567212",
             index: 2
-        },
-        {
-            image: "https://media.istockphoto.com/videos/credit-score-concept-video-id1315958651",
-            index: 3
         }
     ]
 
@@ -28,7 +24,7 @@ export default function ViedoSlider() {
 
     const autoScroll = true;
     let slideInterval;
-    let intervalTime = 5000;
+    let intervalTime = 7000;
 
     function auto() {
         slideInterval = setInterval(nextSlide, intervalTime)
