@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./ViedoSlider.css"
 import "./ViedoSlider.css"
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
@@ -24,7 +24,25 @@ export default function ViedoSlider() {
     ]
 
     const [curent, setCurrent] =useState(0)
-    const length = sliderData.length 
+    const length = sliderData.length;
+
+    const autoScroll = true;
+    let slideInterval ;
+    let intervalTime = 5000;
+
+    function auto (){
+        slideInterval = setInterval(nextSlide, intervalTime)
+    }
+// useEffect(() => {
+//  curent(0)
+// },[])
+    useEffect(() => {
+if(autoScroll){
+    auto()
+}
+
+return() => clearInterval(slideInterval)
+    },[curent])
 
     const nextSlide = () => {
         setCurrent(curent === length-1 ? 0 : curent + 1 )
@@ -48,7 +66,7 @@ export default function ViedoSlider() {
                         e.index === curent && (
                         // <img src= {e.image} alt="" className='Imagess' />
                         // <iframe src={e.image} frameborder="0" className='Imagess' ></iframe>
-                        <video autoPlay width={900}>
+                        <video autoPlay loop width={900}>
                             <source src={e.image}/>
                         </video>
                         )
