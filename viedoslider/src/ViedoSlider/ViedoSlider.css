@@ -1,15 +1,18 @@
 .Slider{
+    /* border: 2px solid red; */
     position: relative;
-    height: 200px;
+    /* height: 200px; */
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .Imagess{
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    margin-top: 5%;
     width: 1000px;
-    height: 200px;
+    height: 400px;
     border-radius: 20px;
     /* margin-left: -110%; */
 }
@@ -17,7 +20,7 @@
 .LeftArrow{
     position: absolute;
     top:50% ;
-    left: 3%;
+    left: 9%;
     font-size: 30px;
     color: black;
     z-index: 10;
@@ -28,7 +31,7 @@
 .RightArrow{
     position: absolute;
     top:50% ;
-    right: 3%;
+    right: 9%;
     font-size: 30px;
     color: black;
     z-index: 10;

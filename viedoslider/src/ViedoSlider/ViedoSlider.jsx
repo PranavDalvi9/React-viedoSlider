@@ -33,7 +33,7 @@ export default function ViedoSlider() {
     function auto (){
         slideInterval = setInterval(nextSlide, intervalTime)
     }
-    
+
     useEffect(() => {
 if(autoScroll){
     auto()
@@ -64,7 +64,7 @@ return() => clearInterval(slideInterval)
                         e.index === curent && (
                         // <img src= {e.image} alt="" className='Imagess' />
                         // <iframe src={e.image} frameborder="0" className='Imagess' ></iframe>
-                        <video autoPlay loop width={900}>
+                        <video autoPlay loop className='Imagess'>
                             <source src={e.image} />
                         </video>
                         )
