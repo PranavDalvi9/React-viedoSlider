@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./ViedoSlider.css"
 import "./ViedoSlider.css"
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight, FaRegWindowClose } from "react-icons/fa"
 
 export default function ViedoSlider() {
     const sliderData = [
@@ -18,6 +18,8 @@ export default function ViedoSlider() {
             index: 2
         }
     ]
+
+    const [visible, setVisible] = useState(true)
 
     const [curent, setCurrent] = useState(0)
     const length = sliderData.length;
@@ -49,26 +51,42 @@ export default function ViedoSlider() {
         setCurrent(curent === 0 ? length - 1 : curent - 1)
     }
 
+    const handleCLose = () => {
+        console.log("close")
+        setVisible(!visible)
+    }
+
 
     return (
-        <div className='Slider'>
-            <FaArrowAltCircleLeft className='LeftArrow' onClick={() => prevSlide()} />
-            <FaArrowAltCircleRight className='RightArrow' onClick={() => nextSlide()} />
+        <div className='MainViedoDiv'>
+
 
             {
-                sliderData.map((e) => (
-                    <div className={e.index === curent ? 'slide-active' : 'slide'} key={e.index}>
+                visible ? <><FaRegWindowClose className='Closee' onClick={() => handleCLose()} />
+                    <div className='Slider'>
+                        <FaArrowAltCircleLeft className='LeftArrow' onClick={() => prevSlide()} />
+                        <FaArrowAltCircleRight className='RightArrow' onClick={() => nextSlide()} />
 
                         {
-                            e.index === curent && (
-                                <video autoPlay loop className='Imagess'>
-                                    <source src={e.image} />
-                                </video>
-                            )
+                            sliderData.map((e) => (
+                                <div className={e.index === curent ? 'slide-active' : 'slide'} key={e.index}>
+
+                                    {
+                                        e.index === curent && (
+                                            <video autoPlay loop className='Imagess'>
+                                                <source src={e.image} />
+                                            </video>
+                                        )
+                                    }
+                                </div>
+                            ))
                         }
-                    </div>
-                ))
+
+                    </div></> :
+                    <><button onClick={() => setVisible(!visible)}>View</button> <h1>Thank you </h1></>
             }
+
+
 
         </div>
     )

@@ -1,3 +1,14 @@
+.MainViedoDiv{
+  /* border: 2px solid red; */
+}
+
+.Closee{
+  border: 2px solid blue;
+  /* padding-top: 3%; */
+  padding: 1%;
+  margin-left: 80%;
+}
+
 .Slider {
   position: relative;
   height: auto;
